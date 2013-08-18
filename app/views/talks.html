@@ -10,9 +10,9 @@
     </thead>
 
     <tbody>
-        <tr ng-repeat="talk in talks">
+        <tr ng-repeat="(talkId, talk) in talks">
             <td>{{ $index + 1 }}</td>
-            <td>{{ talk.title }}</td>
+            <td><a href="#/talks/{{talkId}}" ng-click="talkDetail($event, talkId)">{{ talk.title }}</a></td>
             <td>{{ talk.email }}</td>
             <td>{{ talk.email }}</td>
             <td>{{ talk.email }}</td>
