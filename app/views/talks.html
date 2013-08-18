@@ -4,6 +4,8 @@
             <th>#</th>
             <th>Title</th>
             <th>Email</th>
+            <th><i class="icon-thumbs-up"</i></th>
+            <th><i class="icon-thumbs-down"</i></th>
         </tr>
     </thead>
 
@@ -11,6 +13,8 @@
         <tr ng-repeat="talk in talks">
             <td>{{ $index + 1 }}</td>
             <td>{{ talk.title }}</td>
+            <td>{{ talk.email }}</td>
+            <td>{{ talk.email }}</td>
             <td>{{ talk.email }}</td>
         </tr>
     </tbody>

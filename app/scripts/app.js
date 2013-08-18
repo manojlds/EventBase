@@ -15,6 +15,14 @@ angular.module('EventBaseApp', ['firebase'])
         templateUrl: 'views/talks.html',
         controller: 'TalksCtrl'
       })
+      .when('/talks/:talkId', {
+        templateUrl: 'views/talkdetail.html',
+        controller: 'TalkDetailCtrl'
+      })
+      .when('/404', {
+        templateUrl: 'views/404.html',
+        controller: '404Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
