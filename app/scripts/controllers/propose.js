@@ -2,7 +2,6 @@
 
 angular.module('EventBaseApp').controller('ProposeCtrl', function ($scope, $location, angularFireCollection, angularFireAuth, talksStorage) {
     var url = talksStorage.url;
-    
     angularFireAuth.initialize(url, {scope: $scope, name: "user"});
 
     var ref = new Firebase(url);
@@ -27,5 +26,4 @@ angular.module('EventBaseApp').controller('ProposeCtrl', function ($scope, $loca
     $scope.logout = function() {
         angularFireAuth.logout();
     };
-    
 });
