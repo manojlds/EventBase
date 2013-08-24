@@ -32,6 +32,12 @@ body {
 
 .login {
     padding: 15px;
+    span {
+        color: $gray-light;
+    }
+    a {
+        cursor: pointer;
+    }
 }
 
 .hero-unit {
