@@ -1,8 +1,7 @@
 'use strict';
 
-angular.module('EventBaseApp').service('angularFireVote', function angularFireVote() {
-    var url = "https://eventbase.firebaseio.com/talks";
-
+angular.module('EventBaseApp').service('angularFireVote', function angularFireVote(talksStorage) {
+    var url = talksStorage.url;
     return {
         
     };

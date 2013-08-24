@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('EventBaseApp', ['firebase'])
+angular.module('EventBaseApp', ['firebase', '$strap.directives'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {

@@ -27,7 +27,7 @@
 
     <!-- Add your site or application content here -->
     <div class="page__body">
-        <header class="navbar navbar-inverse">
+        <header class="navbar navbar-inverse" bs-navbar>
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -40,10 +40,10 @@
                 </div>
                 <nav class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
                     <ul class="nav navbar-nav">
-                        <li>
+                        <li data-match-route="/talks">
                             <a href="#/talks">Talks</a>
                         </li>
-                        <li>
+                        <li data-match-route="/propose">
                             <a href="#/propose">Propose</a>
                         </li>
                     </ul>
@@ -75,6 +75,7 @@
     <script src="https://cdn.firebase.com/v0/firebase.js"></script>
     <script src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
     <script src="bower_components/angular-fire/angularFire.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/bootstrap-sass/js/affix.js"></script>
@@ -102,6 +103,7 @@
         <script src="scripts/services/angularFireVote.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/services/UserService.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <!-- endbuild -->
 </body>
 </html>
