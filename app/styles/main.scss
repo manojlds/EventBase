@@ -56,3 +56,21 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+
+.proposal {
+    background-color: $body-bg;
+    padding: 45px 15px 0px 15px;
+    border-radius: $border-radius-base;
+    border: solid 1px $gray-light;
+    position: relative;
+}
+
+.proposal:after {
+    content: attr(title);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-transform: uppercase;
+    color: #bbb;
+    font-weight: bold;
+}
