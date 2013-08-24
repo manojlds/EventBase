@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('EventBaseApp').controller('ProposeCtrl', function ($scope, $location, angularFireCollection, angularFireAuth) {
-    var url = "https://eventbase.firebaseio.com/talks";
+angular.module('EventBaseApp').controller('ProposeCtrl', function ($scope, $location, angularFireCollection, angularFireAuth, talksStorage) {
+    var url = talksStorage.url;
     
     angularFireAuth.initialize(url, {scope: $scope, name: "user"});
 

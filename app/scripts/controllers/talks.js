@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('EventBaseApp').controller('TalksCtrl', function ($scope, $location, angularFire) {
-    var url = "https://eventbase.firebaseio.com/talks";
+angular.module('EventBaseApp').controller('TalksCtrl', function ($scope, $location, angularFire, talksStorage) {
+    var url = talksStorage.url;
     
     angularFire(url, $scope, "talks", {}).then(function(){
     });
