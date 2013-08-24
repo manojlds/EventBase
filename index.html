@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/ddc348a9.main.css">
+</head>
+  <body ng-app="EventBaseApp">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="page__body">
+        <header class="navbar navbar-inverse" bs-navbar="">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">GeekNight</a>
+                </div>
+                <nav class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li data-match-route="/talks">
+                            <a href="#/talks">Talks</a>
+                        </li>
+                        <li data-match-route="/propose">
+                            <a href="#/propose">Propose</a>
+                        </li>
+                    </ul>
+                    <div class="pull-right login" ng-controller="LoginCtrl">
+                        <span ng-show="user">{{user.name}} | <a ng-click="logout()">Logout</a></span>
+                        <span ng-hide="user"><a ng-click="login()">Login</a></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="container" ng-view=""></div>
+    </div>
+    <footer class="bs-footer">
+        <div class="container">
+            <p>Base for Geeks</p>
+        </div>
+    </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+    <script src="bower_components/angular-fire/angularFire.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+
+        <script src="scripts/491c175a.plugins.js"></script>
+
+        <script src="scripts/05e83cdb.scripts.js"></script>
+</body>
+</html>
