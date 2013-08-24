@@ -4,8 +4,7 @@
             <th>#</th>
             <th>Title</th>
             <th>Email</th>
-            <th><i class="icon-thumbs-up"</i></th>
-            <th><i class="icon-thumbs-down"</i></th>
+            <th>Vote</th>
         </tr>
     </thead>
 
@@ -14,8 +13,7 @@
             <td>{{ $index + 1 }}</td>
             <td><a href="#/talks/{{talkId}}" ng-click="talkDetail($event, talkId)">{{ talk.title }}</a></td>
             <td>{{ talk.email }}</td>
-            <td>{{ talk.email }}</td>
-            <td>{{ talk.email }}</td>
+            <td><i class="icon-thumbs-up" ng-click="upvote($event, talkId)"></i> <i ng-click="downvote($event, talkId)" class="icon-thumbs-down"></i></td>
         </tr>
     </tbody>
 

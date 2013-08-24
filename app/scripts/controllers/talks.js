@@ -9,6 +9,14 @@ angular.module('EventBaseApp').controller('TalksCtrl', function ($scope, $locati
     $scope.talkDetail = function(e, talkId){
         e.preventDefault();
         $location.path("/talks/" + talkId);
-    }
+    };
+
+    $scope.upvote = function(e, talkId){
+        alert('upvote');
+    };
+
+    $scope.upvote = function(e, talkId){
+        alert('upvote');
+    };
 
 });
