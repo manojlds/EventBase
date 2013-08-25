@@ -16,9 +16,7 @@ angular.module('EventBaseApp').controller('TalksCtrl', function ($scope, $locati
             alert('You must be logged in to vote');
         }
 
-        $scope.talks[talkId]['upvotes'] = 1;
-
-
+        angularFireVote.vote($scope, talkId, type, userService.user);
     };
 
 });
