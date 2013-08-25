@@ -74,3 +74,30 @@ body {
     color: #bbb;
     font-weight: bold;
 }
+
+.jumbotron {
+    &.vcard, &.when, &.follow-us {
+        padding: 20px;
+        font-size: 16px;
+        min-height: 250px;
+    }
+    &.when {
+        text-align: center;
+    }
+    &.follow-us > ul  {
+        list-style-type: none;
+        text-align: center;
+        padding: 0px;
+        font-size: 50px;
+
+        li {
+            display: inline-block;
+            padding: 10px;
+
+            a {
+                text-decoration: none;
+                text-shadow: 2px 2px $gray-light;
+            }
+        }
+    }
+}
