@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('EventBaseApp').controller('TalksCtrl', function ($scope, $location, angularFire, talksStorage) {
+angular.module('EventBaseApp').controller('TalksCtrl', function ($scope, $location, angularFire, talksStorage, userService, angularFireVote) {
     var url = talksStorage.url;
-    
+
     angularFire(url, $scope, "talks", {}).then(function(){
     });
 
@@ -11,12 +11,14 @@ angular.module('EventBaseApp').controller('TalksCtrl', function ($scope, $locati
         $location.path("/talks/" + talkId);
     };
 
-    $scope.upvote = function(e, talkId){
-        alert('upvote');
-    };
+    $scope.vote = function(e, talkId, type){
+        if(!userService.user){
+            alert('You must be logged in to vote');
+        }
 
-    $scope.upvote = function(e, talkId){
-        alert('upvote');
+        $scope.talks[talkId]['upvotes'] = 1;
+
+
     };
 
 });
