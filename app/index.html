@@ -47,7 +47,7 @@
                             <a href="#/propose">Propose</a>
                         </li>
                     </ul>
-                    <div class="pull-right login" ng-controller="LoginCtrl">
+                    <div class="pull-right login" ng-controller="LoginCtrl" ng-cloak>
                         <span ng-show="user">{{user.name}} | <a ng-click="logout()">Logout</a></span>
                         <span ng-hide="user"><a ng-click="login()">Login</a></span>
                     </div>

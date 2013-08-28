@@ -15,6 +15,10 @@ body {
     color: #333;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .bs-footer {
     border-top: solid 1px $gray-light;
     padding-top: 10px;
